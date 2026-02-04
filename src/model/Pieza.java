@@ -1,6 +1,6 @@
 package model;
 
-public class Pieza {
+public abstract class Pieza {
     private String color;
     private String nombre;
 
