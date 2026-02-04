@@ -35,4 +35,13 @@ public class Movimiento {
     }
 
     // Getters and Setters...
+    public Posicion getPosInicial(){
+        return posInicial;
+    }
+
+    public Posicion getPosFinal(){
+        return posFinal;
+    }
+
+
 }
