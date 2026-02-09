@@ -73,7 +73,7 @@ public class Tablero {
     }
 
     public boolean hayPiezasEntre(Movimiento mov){
-        Posicion inicio = mov.getPosFinal();
+        Posicion inicio = mov.getPosInicial();
         Posicion fin = mov.getPosFinal();
 
         //Eso consigue el dirreccion de movimiento
@@ -112,7 +112,9 @@ public class Tablero {
 
     public void moverPieza(Movimiento mov) {
         Pieza pieza = devuelvePieza(mov.getPosInicial());
-        quitaPieza(mov.getPosInicial());
-        ponPieza(pieza, mov.getPosFinal());
+        if (pieza != null) {
+            quitaPieza(mov.getPosInicial());
+            ponPieza(pieza, mov.getPosFinal());
+        }
     }
 }
