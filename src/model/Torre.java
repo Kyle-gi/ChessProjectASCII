@@ -21,6 +21,5 @@ public class Torre extends Pieza{
     @Override
     public String getSimbolo() {
         return getColor().equals("blanco") ? "♜" : "♖";
-        // Or ASCII: "Tb" for white, "Tn" for black
     }
 }

@@ -11,13 +11,40 @@ public class Tablero {
 
     private void inicializarTablero(){
 
+        //Limpiando la tabla primero
+        for (int i = 0; i < 8; i++){
+            for (int j = 0; j < 8; j++){
+                tabla[i][j] = null;
+            }
+        }
         //Piezas blanco
         tabla[0][0] = new Torre("blanco");
         tabla[0][1] = new Caballo("blanco");
-        tabla[0][2] = new
+        tabla[0][2] = new Alfil("blanco");
+        tabla[0][3] = new Dama("blanco");
+        tabla[0][4] = new Rey("blanco");
+        tabla[0][5] = new Alfil("blanco");
+        tabla[0][6] = new Caballo("blanco");
+        tabla[0][7] = new Torre("blanco");
+
+        // Peones blancos
+        for (int i = 0; i < 8; i++){
+            tabla[1][i] = new Peon("blanco");
+        }
 
         //Piezas negros
         tabla[7][0] = new Torre("negro");
+        tabla[7][1] = new Caballo("negro");
+        tabla[7][2] = new Alfil("negro");
+        tabla[7][3] = new Dama("negro");
+        tabla[7][4] = new Rey("negro");
+        tabla[7][5] = new Alfil("negro");
+        tabla[7][6] = new Caballo("negro");
+        tabla[7][7] = new Torre("negro");
+
+        for (int i = 0; i < 8; i++){
+            tabla[6][i] = new Peon("negro");
+        }
     }
 
     public void pintarTablero(){
