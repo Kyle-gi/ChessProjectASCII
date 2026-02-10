@@ -47,21 +47,34 @@ public class Tablero {
         }
     }
 
-    public void pintarTablero(){
-        System.out.println(" A  B  C  D  E  F  G  H");
-        for (int fila = 7; fila >= 0; fila--){
-            System.out.print((fila + 1) + " ");
-            for (int col = 0; col < 8; col++){
-                if(tabla[fila][col] == null){
-                    System.out.print(" . ");
-                }
-                else {
-                    System.out.print(" " + tabla[fila][col].getSimbolo() + " ");
+    public void pintarTablero() {
+        System.out.println("   A   B   C   D   E   F   G   H");
+        System.out.println("  ┌───┬───┬───┬───┬───┬───┬───┬───┐");
+
+        for (int fila = 7; fila >= 0; fila--) {
+            System.out.print((fila + 1) + " │");
+
+            for (int col = 0; col < 8; col++) {
+                if (tabla[fila][col] == null) {
+                    // Empty square with proper spacing
+                    System.out.print("   │");
+                } else {
+                    // Piece with brackets for visual clarity
+                    String simbolo = tabla[fila][col].getSimbolo();
+                    System.out.print(" " + simbolo + " │");
                 }
             }
+
             System.out.println(" " + (fila + 1));
+
+            // Add horizontal lines between rows (except last row)
+            if (fila > 0) {
+                System.out.println("  ├───┼───┼───┼───┼───┼───┼───┼───┤");
+            }
         }
-        System.out.println(" A  B  C  D  E  F  G  H");
+
+        System.out.println("  └───┴───┴───┴───┴───┴───┴───┴───┘");
+        System.out.println("   A   B   C   D   E   F   G   H");
     }
 
     public boolean hayPieza(int fila, int columna) {
