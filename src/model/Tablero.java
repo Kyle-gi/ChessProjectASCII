@@ -48,20 +48,20 @@ public class Tablero {
     }
 
     public void pintarTablero(){
-        System.out.println(" A  B  C  D  E  F  G  H");
+        System.out.println("   Aㅤ Bㅤ Cㅤ Dㅤ Eㅤ F   G   H");
         for (int fila = 7; fila >= 0; fila--){
             System.out.print((fila + 1) + " ");
             for (int col = 0; col < 8; col++){
                 if(tabla[fila][col] == null){
-                    System.out.print("[ . ]");
+                    System.out.print("(ㅤ)");
                 }
                 else {
-                    System.out.print(" " + tabla[fila][col].getSimbolo() + " ");
+                    System.out.print(tabla[fila][col].getSimbolo());
                 }
             }
-            System.out.println(" " + (fila + 1));
+            System.out.println((fila + 1));
         }
-        System.out.println(" A  B  C  D  E  F  G  H");
+        System.out.println("   Aㅤ Bㅤ Cㅤ Dㅤ Eㅤ F   G   H");
     }
 
     public boolean hayPieza(int fila, int columna) {

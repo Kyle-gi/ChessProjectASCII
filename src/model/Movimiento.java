@@ -34,7 +34,6 @@ public class Movimiento {
         return posFinal.getFila() - posInicial.getFila();
     }
 
-    // Getters and Setters...
     public Posicion getPosInicial(){
         return posInicial;
     }

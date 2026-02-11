@@ -32,6 +32,6 @@ public class Caballo extends Pieza {
 
     @Override
     public String getSimbolo() {
-        return getColor().equals("blanco") ? "♞" : "♘";
+        return getColor().equals("blanco") ? "(♞)" : "(♘)";
     }
 }

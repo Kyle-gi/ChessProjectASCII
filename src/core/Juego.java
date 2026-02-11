@@ -24,17 +24,17 @@ public class Juego {
     }
 
     public String procesarJugada(String entrada) {
-        // Step 1: Basic validation
+        // Paso 1: Validacion basico
         if (entrada == null || entrada.length() != 4) {
             return "Error: La jugada debe tener 4 caracteres (ej: E2E4)";
         }
 
-        // Step 2: Convert to uppercase
+        // Paso 2: Convertir la entrada al uppercase
         entrada = entrada.toUpperCase();
 
-        // Step 3: Split into start and end positions
-        String inicioStr = entrada.substring(0, 2);  // First 2 chars: "E2"
-        String finStr = entrada.substring(2, 4);     // Last 2 chars: "E4"
+        // Step 3: Separar en posicion inicial al final
+        String inicioStr = entrada.substring(0, 2);
+        String finStr = entrada.substring(2, 4);
 
         // Step 4: Convert to Position objects
         Posicion inicio, fin;
