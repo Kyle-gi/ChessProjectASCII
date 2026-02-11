@@ -18,7 +18,7 @@ public class Rey extends Pieza{
             return false;
         }
 
-        // Check destination
+        // Revisar el destino
         Posicion destino = mov.getPosFinal();
         Pieza piezaDestino = tablero.devuelvePieza(destino);
 

@@ -1,6 +1,5 @@
 package model;
 
-import javax.swing.text.TabExpander;
 
 public class Tablero {
     private Pieza[][] tabla = new Pieza[8][8];
@@ -72,6 +71,10 @@ public class Tablero {
         return hayPieza(pos.getFila(), pos.getColumna());
     }
 
+
+    //Esa linea revisa que si hay piezas entre piezas es decir:
+    //Si el torre quiere moverse desde A1 hasta A8 hay un peon enfrente de ello?
+    //Basicamente es un linea de norma y restriccion.
     public boolean hayPiezasEntre(Movimiento mov){
         Posicion inicio = mov.getPosInicial();
         Posicion fin = mov.getPosFinal();
